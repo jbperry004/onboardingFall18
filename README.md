@@ -42,14 +42,16 @@ You should now be able to view the app in a browser at `localhost:3000`
 
 Before commencing work on this section, please thoroughly read the 12 pages of the "Main Concepts" section of the React documentation found at https://reactjs.org/docs/hello-world.html. These are the same pages you skimmed during the interview - it is highly recommended to learn this material thoroughly before hacking at this project.
 
-###Objectives:
+### Objectives:
+
 -Learn how to navigate the file structure of a standard React repository
 -Increase fluency with JavaScript
 -Learn how to divide UI designs into reusable and appropriately-sized components
 -Learn how to pass data between components through props
 -Learn how to manipulate state amidst a hierarchical component structure.
 
-###Specification:
+### Specification:
+
 Your task is to create a 'Todo Tracker' website. This single-page website should be able to perform the following actions:
 -Add todos to a list
 -Delete todos once they have been added
@@ -65,7 +67,7 @@ specifications:
 At this state of the project, do not worry about styling at all (that will be the next stage!) - for now, it's most important
 that you nail down the basics of data flow and state management in React.
 
-###Recommendations
+### Recommendations
 
 Given that you are new to React, I will outline in high-level terms a guideline for implementing the functionality of the website.
 
@@ -84,7 +86,7 @@ Other issues you will inevitably have to consider are how to filter the list of 
 
 If you're still struggling to gain a foothold after reading the React documentation thoroughly and pondering these questions for a while - feel more than free to reach out to me via email or Slack. Happy coding!
 
-###Submission
+### Submission
 
 Once you have completed the requirements of the specification, commit all of your changes by running
 
