@@ -44,25 +44,27 @@ Before commencing work on this section, please thoroughly read the 12 pages of t
 
 ### Objectives:
 
--Learn how to navigate the file structure of a standard React repository
--Increase fluency with JavaScript
--Learn how to divide UI designs into reusable and appropriately-sized components
--Learn how to pass data between components through props
--Learn how to manipulate state amidst a hierarchical component structure.
+- Learn how to navigate the file structure of a standard React repository
+- Increase fluency with JavaScript
+- Learn how to divide UI designs into reusable and appropriately-sized components
+- Learn how to pass data between components through props
+- Learn how to manipulate state amidst a hierarchical component structure.
 
 ### Specification:
 
 Your task is to create a 'Todo Tracker' website. This single-page website should be able to perform the following actions:
--Add todos to a list
--Delete todos once they have been added
--Filter through todos by substring
+
+- Add todos to a list
+- Delete todos once they have been added
+- Filter through todos by substring
 
 Please view the demo video uploaded at `designs/Todo_Demo.m4v` for an idea of what the site should look like. Do note the following
 specifications:
--When there are no todos in the list, the text 'No Todos to complete' should render under 'Current Todos', and the search bar should not appear
--As soon as a todo has been added, it will appear as an unordered list element under 'Current Todos' along with the search bar. Next to the todo should be a button which deletes the todo from the list.
--The search bar updates the filtering whenever its text is changed - if a todo does not contain the text as a substring than it is taken away
--If there are todos in existence and the search bar does not match any of them, the text 'No results found' should be rendered under 'Current Todos'
+
+- When there are no todos in the list, the text 'No Todos to complete' should render under 'Current Todos', and the search bar should not appear
+- As soon as a todo has been added, it will appear as an unordered list element under 'Current Todos' along with the search bar. Next to the todo should be a button which deletes the todo from the list.
+- The search bar updates the filtering whenever its text is changed - if a todo does not contain the text as a substring than it is taken away
+- If there are todos in existence and the search bar does not match any of them, the text 'No results found' should be rendered under 'Current Todos'
 
 At this state of the project, do not worry about styling at all (that will be the next stage!) - for now, it's most important
 that you nail down the basics of data flow and state management in React.
