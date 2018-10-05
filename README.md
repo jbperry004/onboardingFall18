@@ -7,6 +7,8 @@ designed to get you up to speed with our stack. As such, we will be making a
 site in React which stores "todos," designed to introduce you to core aspects of
 frontend web development.
 
+<iframe src="https://giphy.com/embed/yaR8Dux1s0fAI" width="480" height="291" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/lets-do-this-go-time-yaR8Dux1s0fAI">via GIPHY</a></p>
+
 ## Stage 0: Getting Started
 
 This project assumes basic knowledge of git and JavaScript. If you feel like you need a brushup, I'd encourage you
