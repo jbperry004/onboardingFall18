@@ -1,4 +1,4 @@
-# onboardingFall18
+# Fall 2018 React Onboarding
 
 Congratulations on joining DEV - we are very excited to have you on board!
 
@@ -13,6 +13,11 @@ frontend web development.
 
 This project assumes basic knowledge of git and JavaScript. If you feel like you need a brushup, I'd encourage you
 to take some time looking at our training documents found in the dev-general repository at `dev-general/technical.`
+
+If you do not already have node.js installed, please do so at https://nodejs.org/en/
+You can check if you have it downloaded by running `node -v` and `npm -v` in your terminal.
+
+If you do not already have git installed, please do so at https://git-scm.com/downloads
 
 Open a terminal and make a local clone of the repository by running the following command:
 
