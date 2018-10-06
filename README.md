@@ -7,6 +7,8 @@ designed to get you up to speed with our stack. As such, we will be making a
 site in React which stores "todos," designed to introduce you to core aspects of
 frontend web development.
 
+<img src="https://media.giphy.com/media/yaR8Dux1s0fAI/giphy.gif" alt="hoora"/>
+
 ## Stage 0: Getting Started
 
 This project assumes basic knowledge of git and JavaScript. If you feel like you need a brushup, I'd encourage you
@@ -42,6 +44,8 @@ You should now be able to view the app in a browser at `localhost:3000`
 
 Before commencing work on this section, please thoroughly read the 12 pages of the "Main Concepts" section of the React documentation found at https://reactjs.org/docs/hello-world.html. These are the same pages you skimmed during the interview - it is highly recommended to learn this material thoroughly before hacking at this project.
 
+<img src="https://media.giphy.com/media/WoWm8YzFQJg5i/giphy.gif" alt="spongebob" />
+
 ### Objectives:
 
 - Learn how to navigate the file structure of a standard React repository
@@ -58,7 +62,7 @@ Your task is to create a 'Todo Tracker' website. This single-page website should
 - Delete todos once they have been added
 - Filter through todos by substring
 
-Please view the demo video uploaded at `designs/Todo_Demo.m4v` for an idea of what the site should look like. Do note the following
+Please view the demo video uploaded at [designs/Todo_Demo.m4v](designs/Todo_Demo.m4v) for an idea of what the site should look like. Do note the following
 specifications:
 
 - When there are no todos in the list, the text 'No Todos to complete' should render under 'Current Todos', and the search bar should not appear
@@ -71,7 +75,9 @@ that you nail down the basics of data flow and state management in React.
 
 ### Recommendations
 
-Given that you are new to React, I will outline in high-level terms a guideline for implementing the functionality of the website.
+<img src="https://media.giphy.com/media/xT1R9Z8f7YIpYjLvcA/giphy.gif" alt="directions" />
+
+Regardless of your background in React, we can break down this task. Let's outline in high-level terms a guideline for implementing the functionality of the website.
 
 1. Breaking the user interface into different components. I've already created the `ToDoContainer` as a model for you to follow when creating new components, and you should place all of your new components inside that container.
 
@@ -86,7 +92,7 @@ Given that you are new to React, I will outline in high-level terms a guideline 
 
 Other issues you will inevitably have to consider are how to filter the list of todos given a text input (`.match()` and `.filter()` should prove very helpful here), how to conditionally render components and text (this should be in the documentation), and how to maintain track of elements in the todo list for deletion (consider storing an `id` somewhere in the data structure you decide to use).
 
-If you're still struggling to gain a foothold after reading the React documentation thoroughly and pondering these questions for a while - feel more than free to reach out to me via email or Slack. Happy coding!
+If still struggling to gain a foothold after reading the React documentation thoroughly and pondering these questions for a while - feel more than free to reach out to me via email or Slack. Happy coding!
 
 ### Submission
 
@@ -108,3 +114,5 @@ Then, navigate to the remote repository, where you should see a button telling y
 You will now be creating your first pull request - in other words, a submission for your code to be reviewed by me before it is merged into the codebase. Add a title to your request and a description of your work - for now, please write a paragraph or two explaining how your website works and any signficant challenges you faced when making it.
 
 Once you submit your request, I will review your code and propose changes for you to make, and this process keeps iterating until the code is eventually approved.
+
+<img src="https://media.giphy.com/media/3ov9kbFQpQc1oAZEs0/giphy.gif" alt="approved" />
