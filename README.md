@@ -45,7 +45,7 @@ npm run start
 
 You should now be able to view the app in a browser at `localhost:3000`
 
-Our code editor of choice at DEV is VS Code because of its strong support for JavaScript libraries. Please download it here to work on your project: https://code.visualstudio.com/ - there are a lot of features to set up eventually, which we can walk through together in person.
+Our text editor of choice at DEV is VS Code because of its strong support for JavaScript libraries. Please download it here to work on your project: https://code.visualstudio.com/ - there are a lot of features to set up eventually, which we can walk through together in person.
 
 
 ## Stage 1: Basic Functionality
