@@ -19,7 +19,7 @@ You can check if you have it downloaded by running `node -v` and `npm -v` in you
 
 If you do not already have git installed, please do so at https://git-scm.com/downloads
 
-Open a terminal and make a local clone of the repository by running the following command:
+Open a terminal and make a local clone of the repository on your desktop by running the following command:
 
 ```
 git clone https://github.com/jbperry004/onboardingFall18.git
