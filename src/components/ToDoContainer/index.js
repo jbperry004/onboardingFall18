@@ -12,6 +12,11 @@ class ToDoContainer extends Component {
       newTodo: '',
       todos: []
     }
+
+    this.formSubmitted = this.formSubmitted.bind(this);
+    this.newTodoChanged = this.newTodoChanged.bind(this);
+    this.removeTodo = this.removeTodo.bind(this);
+    this.searchTodos = this.searchTodos.bind(this);
   }
 
   // Create new todo
@@ -59,9 +64,9 @@ class ToDoContainer extends Component {
       <div className="app">
         <h3>Todo List</h3>
         <NewTodoForm
-          newTodo={this.state.newTodo} formSubmitted={this.formSubmitted.bind(this)} newTodoChanged={this.newTodoChanged.bind(this)} />
-        {/* Render todos */}
-        <TodoList todos={this.state.todos} removeTodo={this.removeTodo.bind(this)} searchTodos={this.searchTodos.bind(this)} />
+          newTodo={this.state.newTodo} formSubmitted={this.formSubmitted} newTodoChanged={this.newTodoChanged} />
+
+        <TodoList todos={this.state.todos} removeTodo={this.removeTodo} searchTodos={this.searchTodos} />
 
       </div>
 
