@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
 
-const TodoItem = (props) => {
-    return (
-        <li key={props.index}>{props.todo.title}
-            <button onClick={props.removeTodo}>Delete</button>
-        </li>
-    )
-}
+const TodoItem = ({ index, todo, removeTodo }) => {
+  return (
+    <li key={index}>
+      {todo.title}
+      <button onClick={removeTodo}>Delete</button>
+    </li>
+  );
+};
 
 export default TodoItem;
