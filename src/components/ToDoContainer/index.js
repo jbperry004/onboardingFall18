@@ -13,12 +13,16 @@ class ToDoContainer extends Component {
       todos: []
     }
   }
+
+  // Create new todo
   newTodoChanged(event) {
     this.setState({
       newTodo: event.target.value
     })
 
   }
+
+  // Form submission event handler
   formSubmitted(event) {
     event.preventDefault();
     // Add new todo to array
@@ -31,6 +35,7 @@ class ToDoContainer extends Component {
     })
   }
 
+  // Remove clicked todolist
   removeTodo(index) {
     const todos = [...this.state.todos];
     todos.splice(index, 1);
@@ -39,6 +44,7 @@ class ToDoContainer extends Component {
     })
   }
 
+  // Search todolist by substring
   searchTodos(event) {
     let todos = [...this.state.todos];
     todos = todos.filter(todo => todo.title.includes(event.target.value) === true)
