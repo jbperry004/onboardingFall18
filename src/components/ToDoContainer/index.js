@@ -61,9 +61,8 @@ class ToDoContainer extends Component {
         <NewTodoForm
           newTodo={this.state.newTodo} formSubmitted={this.formSubmitted.bind(this)} newTodoChanged={this.newTodoChanged.bind(this)} />
         {/* Render todos */}
-        <TodoList todos={this.state.todos} removeTodo={this.removeTodo.bind(this)} />
+        <TodoList todos={this.state.todos} removeTodo={this.removeTodo.bind(this)} searchTodos={this.searchTodos.bind(this)} />
 
-        <input placeholder="search" onChange={(event) => this.searchTodos(event)} />
       </div>
 
     );

@@ -1,15 +1,24 @@
 import React from 'react';
+import TodoItem from './TodoItem'
 
 const TodoList = (props) => {
-    return (
-        <ul>
-            {(props.todos.map((todo, index) => {
-                return <li key={index}>{todo.title}
-                    <button onClick={() => props.removeTodo(index)}>Delete</button>
-                </li>
-            }))}
-        </ul>
-    )
+    if (props.todos.length > 0) {
+        return (
+            <div>
+                <ul>
+                    {(props.todos.map((todo, index) => {
+                        return <TodoItem key={index} todo={todo} removeTodo={() => props.removeTodo(index)} />
+                    }))}
+                </ul>
+                <input placeholder="search" onChange={props.searchTodos} />
+            </div>
+
+        )
+    } else {
+        return (
+            <p>No Todos to complete</p>
+        )
+    }
 }
 
 export default TodoList;
