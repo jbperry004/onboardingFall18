@@ -8,7 +8,8 @@ class ToDoContainer extends Component {
     super();
     this.state = {
       newTodo: "",
-      todos: []
+      todos: [],
+      filter: ""
     };
   }
 
@@ -46,12 +47,9 @@ class ToDoContainer extends Component {
 
   // Search todolist by substring
   searchTodos = event => {
-    let todos = [...this.state.todos];
-    todos = todos.filter(
-      todo => todo.title.includes(event.target.value) === true
-    );
+    console.log(event.target.value);
     this.setState({
-      todos
+      filter: event.target.value
     });
   };
 
@@ -67,6 +65,7 @@ class ToDoContainer extends Component {
 
         <TodoList
           todos={this.state.todos}
+          filter={this.state.filter}
           removeTodo={this.removeTodo}
           searchTodos={this.searchTodos}
         />

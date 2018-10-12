@@ -1,12 +1,13 @@
 import React from "react";
 import TodoItem from "./TodoItem";
 
-const TodoList = ({ todos, removeTodo, searchTodos }) => {
-  if (todos.length > 0) {
+const TodoList = ({ todos, filter, removeTodo, searchTodos }) => {
+  let filtered = todos.filter(todo => todo.title.match(filter));
+  if (filtered.length > 0) {
     return (
       <div>
         <ul>
-          {todos.map((todo, index) => {
+          {filtered.map((todo, index) => {
             return (
               <TodoItem
                 key={index}
@@ -20,7 +21,14 @@ const TodoList = ({ todos, removeTodo, searchTodos }) => {
       </div>
     );
   } else {
-    return <p>No Todos to complete</p>;
+    return filter ? (
+      <div>
+        <p>No matches found</p>{" "}
+        <input placeholder="search" onChange={searchTodos} />{" "}
+      </div>
+    ) : (
+      "No todos to complete"
+    );
   }
 };
 
