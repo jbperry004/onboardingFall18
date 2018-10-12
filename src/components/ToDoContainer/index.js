@@ -24,11 +24,13 @@ class ToDoContainer extends Component {
   formSubmitted = event => {
     event.preventDefault();
     // Add new todo to array
+    let id = this.state.todos.length;
     this.setState({
       newTodo: "",
       todos: [
         ...this.state.todos,
         {
+          id,
           title: this.state.newTodo,
           done: false
         }
@@ -38,8 +40,7 @@ class ToDoContainer extends Component {
 
   // Remove clicked todolist
   removeTodo = index => {
-    const todos = [...this.state.todos];
-    todos.splice(index, 1);
+    let todos = this.state.todos.filter(todo => todo.id !== index);
     this.setState({
       todos
     });
