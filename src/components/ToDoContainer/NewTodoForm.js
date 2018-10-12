@@ -1,7 +1,7 @@
 import React from "react";
 
 const NewTodoForm = ({ formSubmitted, newTodoChanged, newTodo }) => (
-  <form onSubmit={formSubmitted}>
+  <div>
     <input
       onChange={newTodoChanged}
       id="newTodo"
@@ -9,8 +9,10 @@ const NewTodoForm = ({ formSubmitted, newTodoChanged, newTodo }) => (
       placeholder="Add todo"
       value={newTodo}
     />
-    <button type="submit">Add Todo</button>
-  </form>
+    <button type="submit" onClick={formSubmitted}>
+      Add Todo
+    </button>
+  </div>
 );
 
 export default NewTodoForm;

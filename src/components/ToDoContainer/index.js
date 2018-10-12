@@ -22,15 +22,13 @@ class ToDoContainer extends Component {
 
   // Form submission event handler
   formSubmitted = event => {
-    event.preventDefault();
-    // Add new todo to array
     let id = this.state.todos.length;
     this.setState({
       newTodo: "",
       todos: [
         ...this.state.todos,
         {
-          id,
+          id: id,
           title: this.state.newTodo,
           done: false
         }
@@ -41,6 +39,8 @@ class ToDoContainer extends Component {
   // Remove clicked todolist
   removeTodo = index => {
     let todos = this.state.todos.filter(todo => todo.id !== index);
+    console.log(todos);
+    console.log("Index: " + index);
     this.setState({
       todos
     });
