@@ -29,8 +29,7 @@ class ToDoContainer extends Component {
         ...this.state.todos,
         {
           id: id,
-          title: this.state.newTodo,
-          done: false
+          title: this.state.newTodo
         }
       ]
     });
@@ -43,8 +42,6 @@ class ToDoContainer extends Component {
       todo.id = todo.id - 1;
       return todo;
     });
-    console.log(todos);
-    console.log("Index: " + index);
     this.setState({
       todos
     });
