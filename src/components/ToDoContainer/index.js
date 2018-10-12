@@ -38,7 +38,11 @@ class ToDoContainer extends Component {
 
   // Remove clicked todolist
   removeTodo = index => {
-    let todos = this.state.todos.filter(todo => todo.id !== index);
+    let arr = this.state.todos.filter(todo => todo.id !== index);
+    let todos = arr.map(todo => {
+      todo.id = todo.id - 1;
+      return todo;
+    });
     console.log(todos);
     console.log("Index: " + index);
     this.setState({
