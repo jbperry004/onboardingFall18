@@ -124,3 +124,202 @@ You will now be creating your first pull request - in other words, a submission 
 Once you submit your request, I will review your code and propose changes for you to make, and this process keeps iterating until the code is eventually approved.
 
 <img src="https://media.giphy.com/media/3ov9kbFQpQc1oAZEs0/giphy.gif" alt="approved" />
+
+## Stage 1.5: Revision and Rebase
+
+### Specification
+
+Please account for all of the feedback you received on stage 1. 
+Learn how to maintain a clean git history
+
+### Submission
+
+Run
+```
+git log
+```
+to get the id number of your latest commit and copy that id number to your clipboard.
+
+Next, please commit your code using the following command: 
+
+```
+git add .
+git commit --fixup PREV_COMMIT
+```
+
+where PREV_COMMIT is the hash of the previous commit. This indicates that this is not a new commit in itself, but rather a fix of a previous commit. 
+
+We can now merge this commit into the previous commit - squashing "fixup" commits into their mistaken earlier commits is an important part of maintaining a clean git history. 
+
+Run 
+```
+git fetch origin
+git rebase --autosquash origin/master
+```
+to "autosquash" the fixup commit into the previous commit messages. If you get any merge conflicts, fix them, `git add` the relevant files, and run `git rebase --continue` to keep going. 
+
+Now, run 
+```
+git push origin YOUR_BRANCH --force
+```
+
+to push your new code onto your remote branch. You need the `--force` flag because you have modified your previous commit history. 
+
+## Stage 2: Styling
+
+N.B: This stage assumes basic knowledge of CSS. If you need a quick review - or even if you need to look anything up during this part of the assignment - W3Schools is a great resource for this: https://www.w3schools.com/css/default.asp
+
+### tl;dr
+
+-Style your REVISED code from stage 1
+-Review CSS, learn Flexbox and Styled Components
+
+### Introduction to Styling in React
+
+Styling in React is very much similar to CSS but not quite the same. Let's go over some of the key similarities and differences!
+
+Here at DEV, we use a very nifty library known as `styled-components` to accomplish styling in React. Its philosophy is as follows: instead of making one large CSS stylesheet for the whole site, it is easier to assign styled attributes to each component individually. For example, in this app, we can create a styled `DeleteButton` component from the more general `button` component. Here are examples of the syntax:
+
+```
+const SubmitButton = styled.button`
+  width: 50%;
+  margin-bottom: 10px;
+  border-radius: 2px;
+`;
+
+const Container = styled(Flex)`
+  background-color: blue;
+  width: 100%;
+  margin-top: 10px;
+`;
+```
+
+When writing these components, you can use the full power of CSS when defining their properties. The best part is, however, that once we define these 'styled' components, we can use them just as we can use the components they were derived from - i.e., we can pass in the same props and attributes - the only difference is that they now contain the new styles!
+
+For example, we can write
+
+```
+<Container>
+   <SubmitButton onClick={this.handleClick}> Click me! </SubmitButton>
+</Container>
+```
+in place of 
+
+```
+<div>
+   <button onClick={this.handleClick}> Click me! </button>
+</div>
+```
+
+When a project is fully styled, almost all of its components tend to be styled components instead of the basic ones like `div`, `p`, and `input`. 
+
+N.B. - you might notice a difference between `styled.li` and `styled(Flex)` - this is because `li` is a basic, built-in component whereas `Flex` is a component we import from a library.
+
+For more information about `styled-components`, please consult the documentation at https://www.styled-components.com/docs/basics#getting-started.
+
+### Flexbox
+
+You might have wondered why we use the `Flex` component in the previous example instead of `div`. This is because `Flex` allows us access to Flexbox, a powerful way of laying out components in HTML, and indeed React.
+
+At DEV, we use Flexbox almost always (rather than `float` or `relative` positioning, for example), because of the clean way it fits into the component hierarchy which characterizes React. When a `Flex` component has children, it can dictate how it wishes its children to interact - should they be stacked in rows or columns, how they should be aligned on their main and secondary axes, and how they should react to resizing. 
+
+Before you get started on this portion of the project, please complete the (fun!) game https://flexboxfroggy.com/ to teach yourself Flexbox - it will teach you everything you need to know in about 30 minutes! You can also find a good quick reference to Flexbox here at https://css-tricks.com/snippets/css/a-guide-to-flexbox/.
+
+In React, when you want to employ Flexbox (which should be all the time), you use the `Flex` component, which is basically a `div` tag with the CSS property `{display: flex}` by default. To specify Flexbox-related properties for the component (such as `flex-direction`, `align-items`, or `justify-content`, however, you do not specify these with the other CSS properties in the styled component, but rather pass them as props. For example: 
+
+```
+import { Flex } from 'grid-styled'
+import styled from 'styled-components'
+
+const SubmitButton = styled.button`
+  width: 50%;
+  margin-bottom: 10px;
+  border-radius: 2px;
+`;
+
+const Container = styled(Flex)`
+  background-color: blue;
+  width: 100%;
+  margin-top: 10px;
+`;
+
+const Text = styled(Flex)`
+  font: Arial
+  font-size: 18px;
+  font-weight: 300;
+`
+
+<Container flexDirection="column" justifyContent="flex-start" alignItems="center">
+   <Text>Hi!</Text>
+   <SubmitButton onClick={this.handleClick}> Click me! </SubmitButton>
+</Container>
+```
+
+This example will ensure that the "Hi" text and the "Click me!" button will be stacked vertically, aligned to the top of the page, and aligned in the center of the page's width.
+
+### Specification
+
+The goal of this stage is to style your basic todo site from stage 1 into the EXACT form indicated in the video at [designs/Styled_Demo.m4v](designs/Styled_Demo.m4v). 
+
+You're free (and encouraged!) to customize basic details (colors, fonts, etc.) but the core styling details (layout, sizing, hover states, transitions, etc.) should be exactly the same as in the video.
+
+Do note the following: 
+-When you hover over the buttons, they change color into their original border color, and the text color changes to white. This change does not happen immediately but rather over a (relatively short) transition period. 
+-When you type in the input fields, the border of the field changes color and grows slightly. 
+
+### Setup and Submission
+
+Run:
+```
+npm i -s styled-components
+```
+and 
+```
+npm i -s grid-styled
+```
+
+to install the dependencies necessary for this stage of the project.
+
+Next, for each of your `index.js` files for individual components, create a `styles.js` file in the same directory, which will have the following structure:
+
+```
+import { Flex } from 'grid-styled'
+import styled from 'styled-components'
+
+export const SubmitButton = styled.button`
+  width: 50%;
+  margin-bottom: 10px;
+  border-radius: 2px;
+`;
+
+export const Container = styled(Flex)`
+  background-color: blue;
+  width: 100%;
+  margin-top: 10px;
+`;
+
+export const Text = styled(Flex)`
+  font: Arial
+  font-size: 18px;
+  font-weight: 300;
+`
+```
+
+Then, you can add the following line to your `index.js` file to import the styled components for use!
+
+```
+import { SubmitButton, Container, Text } from './styles'
+```
+
+Style your code, commit, push to the same branch, and create a new pull request for me to review your code!
+
+
+
+
+
+
+
+
+
+
+
