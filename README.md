@@ -259,7 +259,7 @@ This example will ensure that the "Hi" text and the "Click me!" button will be s
 
 ### Specification
 
-The goal of this stage is to style your basic todo site from stage 1 into the EXACT form indicated in the video at [designs/Styled_Demo.m4v](designs/Styled_Demo.m4v). 
+The goal of this stage is to style your basic todo site from stage 1 into the EXACT form indicated in the video at [designs/DESIGN_DEMO.m4v](designs/DESIGN_DEMO.m4v). 
 
 You're free (and encouraged!) to customize basic details (colors, fonts, etc.) but the core styling details (layout, sizing, hover states, transitions, etc.) should be exactly the same as in the video.
 
