@@ -1,7 +1,10 @@
-import React, { Component } from "react";
+import React, {
+  Component
+} from "react";
 
 import NewTodoForm from "./NewTodoForm";
 import TodoList from "./TodoList";
+
 
 class ToDoContainer extends Component {
   constructor() {
@@ -56,22 +59,34 @@ class ToDoContainer extends Component {
   };
 
   render() {
-    return (
-      <div className="app">
-        <h3>Todo List</h3>
-        <NewTodoForm
-          newTodo={this.state.newTodo}
-          formSubmitted={this.formSubmitted}
-          newTodoChanged={this.newTodoChanged}
-        />
+    return ( < div className = "app" >
+      <
+      h3 > Todo List < /h3>  <
+      NewTodoForm newTodo = {
+        this.state.newTodo
+      }
+      formSubmitted = {
+        this.formSubmitted
+      }
+      newTodoChanged = {
+        this.newTodoChanged
+      }
+      />
 
-        <TodoList
-          todos={this.state.todos}
-          filter={this.state.filter}
-          removeTodo={this.removeTodo}
-          searchTodos={this.searchTodos}
-        />
-      </div>
+      <
+      TodoList todos = {
+        this.state.todos
+      }
+      filter = {
+        this.state.filter
+      }
+      removeTodo = {
+        this.removeTodo
+      }
+      searchTodos = {
+        this.searchTodos
+      }
+      /> </div >
     );
   }
 }
