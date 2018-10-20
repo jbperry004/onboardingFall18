@@ -1,10 +1,9 @@
-import React, {
-  Component
-} from "react";
+import React, { Component } from "react";
 
 import NewTodoForm from "./NewTodoForm";
 import TodoList from "./TodoList";
-
+import styled from "styled-components";
+import { Flex, Box } from "grid-styled";
 
 class ToDoContainer extends Component {
   constructor() {
@@ -59,34 +58,30 @@ class ToDoContainer extends Component {
   };
 
   render() {
-    return ( < div className = "app" >
-      <
-      h3 > Todo List < /h3>  <
-      NewTodoForm newTodo = {
-        this.state.newTodo
-      }
-      formSubmitted = {
-        this.formSubmitted
-      }
-      newTodoChanged = {
-        this.newTodoChanged
-      }
-      />
+    const Header = styled.h1`
+      margin: 1em;
+      padding: 0.25em 1em;
+    `;
 
-      <
-      TodoList todos = {
-        this.state.todos
-      }
-      filter = {
-        this.state.filter
-      }
-      removeTodo = {
-        this.removeTodo
-      }
-      searchTodos = {
-        this.searchTodos
-      }
-      /> </div >
+    return (
+      <div className="app">
+        <Flex justifyContent="Center">
+          <Box>
+            <Header>Todo List</Header>
+          </Box>
+        </Flex>
+        <NewTodoForm
+          newTodo={this.state.newTodo}
+          formSubmitted={this.formSubmitted}
+          newTodoChanged={this.newTodoChanged}
+        />
+        <TodoList
+          todos={this.state.todos}
+          filter={this.state.filter}
+          removeTodo={this.removeTodo}
+          searchTodos={this.searchTodos}
+        />{" "}
+      </div>
     );
   }
 }
