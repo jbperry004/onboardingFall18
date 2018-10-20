@@ -1,26 +1,7 @@
 import React from "react";
 import TodoItem from "./TodoItem";
-import styled from "styled-components";
 import { Flex, Box } from "grid-styled";
-
-const SearchInputField = styled.input`
-  background: white;
-  color: black;
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid black;
-  width: 280px;
-  border-radius: 10px;
-  &:hover {
-    border: 2px solid blue;
-  }
-`;
-
-const Text = styled.p`
-  margin: 1em;
-  padding: 0.25em 1em;
-`;
+import { SearchInputField, Text } from "./styles";
 
 const TodoList = ({ todos, filter, removeTodo, searchTodos }) => {
   let filtered = todos.filter(todo => todo.title.match(filter));

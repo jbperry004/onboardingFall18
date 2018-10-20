@@ -1,34 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import { Flex, Box } from "grid-styled";
-
-const SubmitButton = styled.button`
-  background: white;
-  color: black;
-  font-size: 1em;
-  margin: ;
-  padding: 0.25em 1em;
-  border: 2px solid blue;
-  border-radius: 10px;
-  &:hover {
-    background: blue;
-    color: white;
-  }
-`;
-
-const AddInputField = styled.input`
-  background: white;
-  color: black;
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid black;
-  border-radius: 10px;
-  width: 180px;
-  &:hover {
-    border: 2px solid blue;
-  }
-`;
+import { AddInputField, SubmitButton } from "./styles";
 
 const NewTodoForm = ({ formSubmitted, newTodoChanged, newTodo }) => (
   <div>

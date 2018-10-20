@@ -2,8 +2,8 @@ import React, { Component } from "react";
 
 import NewTodoForm from "./NewTodoForm";
 import TodoList from "./TodoList";
-import styled from "styled-components";
 import { Flex, Box } from "grid-styled";
+import styled from "styled-components";
 
 class ToDoContainer extends Component {
   constructor() {
